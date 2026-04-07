@@ -1,0 +1,30 @@
+name: ${ENV_NAME}
+services:
+  backend:
+    image: ${IMAGE_NAME}
+    restart: unless-stopped
+    volumes:
+      - "./.env:/app/.env"
+    networks:
+      - traefiknetwork
+      - infra
+
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefiknetwork"
+      - "traefik.http.routers.${ENV_NAME}.rule=Host(`${ENV_HOST}`) && PathPrefix(`/api`)"
+      - "traefik.http.routers.${ENV_NAME}.ruleSyntax=v3"
+      - "traefik.http.routers.${ENV_NAME}.entrypoints=websecure"
+      - "traefik.http.routers.${ENV_NAME}.priority=100"
+      - "traefik.http.routers.${ENV_NAME}.tls=true"
+      - "traefik.http.routers.${ENV_NAME}.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.${ENV_NAME}.middlewares=${ENV_NAME}-rewrite"
+      - "traefik.http.middlewares.${ENV_NAME}-rewrite.replacePathRegex.regex=^/api(.*)"
+      - "traefik.http.middlewares.${ENV_NAME}-rewrite.replacePathRegex.replacement=/api/v1$1"
+      - "traefik.http.services.${ENV_NAME}.loadbalancer.server.port=8000"
+
+networks:
+  traefiknetwork:
+    external: true
+  infra:
+    external: true

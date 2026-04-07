@@ -1,0 +1,152 @@
+[
+  {
+    "title": "Prepare Q1 Budget Report",
+    "description": "Compile and analyze financial data for Q1 and prepare the consolidated budget performance report for executive review.",
+    "dueDate": "2026-03-05",
+    "priority": "HIGH"
+  },
+  {
+    "title": "Update Project Roadmap",
+    "description": "Revise the product roadmap to reflect new feature priorities, timeline adjustments, and stakeholder feedback.",
+    "dueDate": "2026-03-08",
+    "priority": "HIGH"
+  },
+  {
+    "title": "Database Performance Optimization",
+    "description": "Identify slow-running queries and implement indexing and caching improvements to optimize database performance.",
+    "dueDate": "2026-03-12",
+    "priority": "MEDIUM"
+  },
+  {
+    "title": "Client Onboarding Session",
+    "description": "Conduct onboarding meeting with new enterprise client and provide system walkthrough and documentation.",
+    "dueDate": "2026-02-28",
+    "priority": "HIGH"
+  },
+  {
+    "title": "Security Audit Review",
+    "description": "Review recent internal security audit findings and create remediation action plan.",
+    "dueDate": "2026-03-15",
+    "priority": "HIGH"
+  },
+  {
+    "title": "Team Performance Evaluations",
+    "description": "Complete quarterly performance reviews and document feedback for all direct reports.",
+    "dueDate": "2026-03-20",
+    "priority": "MEDIUM"
+  },
+  {
+    "title": "Marketing Campaign Analysis",
+    "description": "Analyze KPIs from the latest digital marketing campaign and prepare summary insights.",
+    "dueDate": "2026-03-10",
+    "priority": "MEDIUM"
+  },
+  {
+    "title": "Website UX Improvements",
+    "description": "Implement recommended UX enhancements based on recent usability testing results.",
+    "dueDate": "2026-03-18",
+    "priority": "LOW"
+  },
+  {
+    "title": "Vendor Contract Renewal",
+    "description": "Review and renegotiate terms for expiring vendor contracts to ensure cost efficiency.",
+    "dueDate": "2026-03-25",
+    "priority": "MEDIUM"
+  },
+  {
+    "title": "Data Backup Verification",
+    "description": "Validate integrity of automated backups and test restoration procedures.",
+    "dueDate": "2026-02-27",
+    "priority": "HIGH"
+  },
+  {
+    "title": "API Documentation Update",
+    "description": "Update API documentation to reflect new endpoints and deprecated methods.",
+    "dueDate": "2026-03-07",
+    "priority": "LOW"
+  },
+  {
+    "title": "Customer Satisfaction Survey",
+    "description": "Design and distribute quarterly customer satisfaction survey and collect responses.",
+    "dueDate": "2026-03-14",
+    "priority": "MEDIUM"
+  },
+  {
+    "title": "Infrastructure Cost Review",
+    "description": "Evaluate monthly cloud infrastructure expenses and identify cost optimization opportunities.",
+    "dueDate": "2026-03-22",
+    "priority": "MEDIUM"
+  },
+  {
+    "title": "Compliance Training Session",
+    "description": "Organize and deliver mandatory compliance training for all staff members.",
+    "dueDate": "2026-03-30",
+    "priority": "HIGH"
+  },
+  {
+    "title": "Bug Triage Meeting",
+    "description": "Review open defects, prioritize fixes, and assign tasks to development team.",
+    "dueDate": "2026-02-24",
+    "priority": "HIGH"
+  },
+  {
+    "title": "Mobile App Release Planning",
+    "description": "Coordinate release plan, finalize feature freeze date, and prepare deployment checklist.",
+    "dueDate": "2026-03-11",
+    "priority": "HIGH"
+  },
+  {
+    "title": "Internal Knowledge Base Update",
+    "description": "Update outdated articles and add new process documentation to internal wiki.",
+    "dueDate": "2026-03-28",
+    "priority": "LOW"
+  },
+  {
+    "title": "Stakeholder Status Report",
+    "description": "Prepare and distribute weekly project status report to key stakeholders.",
+    "dueDate": "2026-02-23",
+    "priority": "HIGH"
+  },
+  {
+    "title": "Code Review Session",
+    "description": "Conduct peer code review for recently submitted pull requests.",
+    "dueDate": "2026-02-26",
+    "priority": "MEDIUM"
+  },
+  {
+    "title": "Server Patch Deployment",
+    "description": "Apply latest security patches to production servers and verify system stability.",
+    "dueDate": "2026-03-03",
+    "priority": "HIGH"
+  },
+  {
+    "title": "Recruitment Interview Panel",
+    "description": "Participate in technical interviews for open software engineer position.",
+    "dueDate": "2026-03-09",
+    "priority": "MEDIUM"
+  },
+  {
+    "title": "Analytics Dashboard Enhancement",
+    "description": "Add new KPIs and improve visualization clarity in executive analytics dashboard.",
+    "dueDate": "2026-03-16",
+    "priority": "LOW"
+  },
+  {
+    "title": "Disaster Recovery Drill",
+    "description": "Conduct simulated disaster recovery exercise to validate continuity procedures.",
+    "dueDate": "2026-03-27",
+    "priority": "HIGH"
+  },
+  {
+    "title": "Product Feature Specification",
+    "description": "Draft detailed functional and technical specifications for upcoming feature release.",
+    "dueDate": "2026-03-13",
+    "priority": "MEDIUM"
+  },
+  {
+    "title": "Quarterly Board Presentation",
+    "description": "Prepare presentation deck summarizing financials, product progress, and strategic initiatives.",
+    "dueDate": "2026-03-31",
+    "priority": "HIGH"
+  }
+]
