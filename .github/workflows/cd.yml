@@ -1,0 +1,50 @@
+name: CD Pipeline
+on:
+  workflow_run:
+    types: [ completed ]
+    workflows: [ "CI Pipeline" ]
+env:
+  IMAGE_ROOT_NAME: docker.io/ahagbes/hello
+
+jobs:
+  packaging:
+    runs-on: ubuntu-24.04
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    outputs:
+      image: ${{ steps.image.outputs.IMAGE_NAME }}
+    steps:
+      - name: Compute image name
+        id: image
+        run: |
+          if [[ "${{ github.event.workflow_run.head_branch }}" == v* ]]; then
+              echo "IMAGE_NAME=${{ env.IMAGE_ROOT_NAME }}:${{ github.event.workflow_run.head_branch }}" >> $GITHUB_OUTPUT
+          elif [[ "${{ github.event.workflow_run.head_branch }}" == "main" ]]; then
+              SHA=$(echo "${{ github.event.workflow_run.head_sha }}" | cut -c1-7)
+              echo "IMAGE_NAME=${{ env.IMAGE_ROOT_NAME }}:${SHA}" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Build and push image
+        run: |
+          echo "Building image ${{steps.image.outputs.IMAGE_NAME}} ..."
+
+  deploy-staging:
+    runs-on: ubuntu-24.04
+    needs: packaging
+    environment: staging
+    if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'cicd' }}
+    steps:
+      - name: Deploy image
+        run: |
+          echo "Deploying image ${{needs.packaging.outputs.image}} into staging ..."
+          echo "Open your browser at https://${{vars.HOST}} to see the result ..."
+
+  deploy-production:
+    runs-on: ubuntu-24.04
+    needs: packaging
+    environment: production
+    if: ${{ github.event.workflow_run.conclusion == 'success' && startsWith(github.event.workflow_run.head_branch, 'v') }}
+    steps:
+      - name: Deploy image
+        run: |
+          echo "Deploying image ${{needs.packaging.outputs.image}} into production ..."
+          echo "Open your browser at https://${{vars.HOST}} to see the result ..."
