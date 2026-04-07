@@ -1,0 +1,12 @@
+name: CI Pipeline
+on:
+  push:
+
+jobs:
+  validation:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout repository
+        run: |
+          echo "The ref is ${{ github.ref_name }}"
